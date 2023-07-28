@@ -33,30 +33,35 @@
         </div>
       </div>
       <div class="col-6">
-        <ul class="row list-unstyled">
-          <% for(var i=0; i<recipes.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-              <a href="/recipe/<%= recipes[i]._id%>">
-                <h2>
-                  <%= recipes[i].name%>
-                </h2>
-                <img class="img-fluid" src="<%= recipes[i].image%>">
-                <p>
-                  <%= recipes[i].ingredients %>
-                </p>
-                <p>
-                  <%= recipes[i].directions %>
-                </p>
-              </a>
-            </li>
-            <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/favorites">Favorites</a>
-        </div>
+        <% for(var i=0; i<recipes.length; i++) {%>
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <a href="/recipe/<%= recipes[i]._id%>">
+                  <img src="<%= recipes[i].image%>" class="card-img-top" alt="...">
+                </a>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title ">Nombre: <%= recipes[i].name %>
+                  </h5>
+                  <p class="card-text truncated-text"> Ingredientes: <%= recipes[i].ingredients %>
+                  </p>
+                  <p class="card-text truncated-text">
+                    Receta: <%= recipes[i].directions %>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Escripta por: <%= user.email %></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+            <div class="row justify-content-center mt-5">
+              <a class="btn btn-primary" href="/feed">Return to Feed</a>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <a class="btn btn-primary" href="/favorites">Favorites</a>
+            </div>
       </div>
     </div>
   </div>

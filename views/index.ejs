@@ -1,11 +1,35 @@
 <%- include('partials/header') -%>
 
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</main>
-    
+    <!-- Contenido principal -->
+    <div class="container mt-4 flex-grow-1">
+        <div class="row">
+            <!-- Imagen a la izquierda -->
+            <div class="col-md-6 text-center">
+                <img src="imgs/cropped-logo.png" alt="Imagen Principal" class="img-fluid">
+            </div>
 
-<%- include('partials/footer') -%>
+            <!-- Texto y botones a la derecha -->
+            <div class="col-md-6">
+                <h1>Bienvenido Recetas Ya!</h1>
+                <p>
+                    En nuestra aplicación, encontrarás una amplia variedad de recetas deliciosas y fáciles de preparar.
+                    Desde platos tradicionales hasta opciones creativas para sorprender a tus seres queridos, tenemos
+                    algo para todos los gustos y ocasiones.
+                    <br></br>
+                    Descubre nuevas inspiraciones culinarias y mejora tus habilidades en la cocina con nuestras recetas
+                    detalladas, paso a paso y con ingredientes fáciles de conseguir. ¡Prepárate para deleitar tu paladar
+                    y el de tus invitados!
+                    <br></br>
+                    Navega por nuestras categorías de recetas, que incluyen platos principales, entrantes, postres,
+                    opciones vegetarianas y mucho más. También ofrecemos consejos y trucos útiles para perfeccionar tus
+                    habilidades culinarias y convertirte en un experto chef.
+                </p>
+                <div class="d-grid gap-2 mt-4">
+                    <a href="/signup" class="btn btn-primary">Sign Up</a>
+                    <a href="/login" class="btn btn-outline-primary">Login</a>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('partials/footer') -%>
